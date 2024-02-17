@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .temp-result-container {
+    font-family: 'Avenir Next', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 15px;
+    width: 100px;
+    text-align: center;
+    background-color: theme('colors.gray.400');
+  }
+
+  .temp-input-txt {
+    border-radius: 15px;
+    font-size: 20px;
+    @apply outline-none p-4 shadow-none border-2 border-solid border-pink-300;
+  }
+}

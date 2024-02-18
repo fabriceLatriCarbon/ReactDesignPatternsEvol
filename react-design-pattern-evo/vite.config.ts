@@ -9,16 +9,16 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: '@hoc',
+        replacement: path.resolve(__dirname, 'src', '01-high-order-component'),
+      },
+      {
+        find: '@renderProps',
+        replacement: path.resolve(__dirname, 'src', '02-render-props'),
+      },
+      {
         find: '@ui',
         replacement: path.resolve(__dirname, 'src', 'ui'),
-      },
-      {
-        find: '@containers',
-        replacement: path.resolve(__dirname, 'src', 'containers'),
-      },
-      {
-        find: '@providers',
-        replacement: path.resolve(__dirname, 'src', 'providers'),
       },
     ],
   },

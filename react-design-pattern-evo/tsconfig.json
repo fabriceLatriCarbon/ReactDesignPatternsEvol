@@ -23,9 +23,9 @@
     /* Paths Alias */
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["./src/ui/*"],
-      "@containers/*": ["./src/containers/*"],
-      "@providers/*": ["./src/providers/*"]
+      "@hoc/*": ["./src/01-high-order-component/*"],
+      "@renderProps/*": ["src/02-render-props/*"],
+      "@ui/*": ["./src/ui/*"]
     }
   },
   "include": ["src"],

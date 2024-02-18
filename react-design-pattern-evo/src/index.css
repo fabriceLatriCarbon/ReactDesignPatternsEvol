@@ -19,4 +19,8 @@
     font-size: 20px;
     @apply outline-none p-4 shadow-none border-2 border-solid border-pink-300;
   }
+
+  .btn-gradient-indigo-to-pink {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-slate-200 font-bold py-3 px-6 rounded-lg;
+  }
 }

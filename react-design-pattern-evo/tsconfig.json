@@ -25,7 +25,9 @@
     "paths": {
       "@hoc/*": ["./src/01-high-order-component/*"],
       "@renderProps/*": ["src/02-render-props/*"],
-      "@ui/*": ["./src/ui/*"]
+      "@customHooks/*": ["src/03-custom-hooks/*"],
+      "@ui/*": ["./src/ui/*"],
+      "@commonHooks/*": ["./src/helpers/hooks/*"]
     }
   },
   "include": ["src"],

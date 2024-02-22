@@ -1,3 +1,5 @@
+// CounterButton.tsx
+
 import React from 'react';
 import { WithCounterProps } from '@hoc/type';
 import LinearGradientButton from '@ui/buttons/LinearGradientButton';

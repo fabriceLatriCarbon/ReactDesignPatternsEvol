@@ -1,23 +1,31 @@
-import { useCallback, useState } from "react";
+import { useRef, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { useOnClickOutside } from "@commonHooks/useClickOutside";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
-  const navigate = useNavigate();
+  const ref = useRef<HTMLDivElement | null>(null);
+
 
   const menuItems = [
     { text: "HOC", link: '/high-order-component' },
-    { text: "Render Props", link: '/renderprops' },
-    { text: "Wallet" },
-    { text: "Help" },
+    { text: "Render Props", link: '/render-props' },
+    { text: "Custom Hooks", link: '/custom-hooks' },
   ];
 
-  const navigateTo = useCallback((href: string) => {
-    setNav(false);
+  const navigateTo = (href: string) => {
     navigate(href);
-  }, [navigate]);
+  };
+
+  const closeDrawer = () => {
+    if (nav) setNav(!nav);
+  }
+
+  const navigate = useNavigate();
+
+  useOnClickOutside(ref, closeDrawer);
 
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4 shadow-sm">
@@ -43,6 +51,7 @@ const Navbar = () => {
             ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300"
             : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"
         }
+        ref={ref}
       >
         <AiOutlineClose
           onClick={() => setNav(!nav)}
@@ -58,7 +67,7 @@ const Navbar = () => {
               return (
                 <div key={index} className=" py-4">
                   <li>
-                    {link && (<button className="text-xl cursor-pointer  w-[100%] rounded-full py-2 px-8 hover:text-white hover:bg-black flex-grow" onClick={(_) => navigateTo(link)}>{text}</button>)}
+                    <button className="text-xl cursor-pointer  w-[100%] rounded-full py-2 px-8 hover:text-white hover:bg-black flex-grow" onClick={(_) => navigateTo(link)}>{text}</button>
                   </li>
                 </div>
               );

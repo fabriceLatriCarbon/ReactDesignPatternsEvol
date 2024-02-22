@@ -17,8 +17,16 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src', '02-render-props'),
       },
       {
+        find: '@customHooks',
+        replacement: path.resolve(__dirname, 'src', '03-custom-hooks'),
+      },
+      {
         find: '@ui',
         replacement: path.resolve(__dirname, 'src', 'ui'),
+      },
+      {
+        find: '@commonHooks',
+        replacement: path.resolve(__dirname, 'src', 'helpers', 'hooks'),
       },
     ],
   },

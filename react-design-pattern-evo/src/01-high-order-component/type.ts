@@ -1,4 +1,4 @@
-export type SharedComponentProps = {
-  sharedState: number;
-  setSharedState: () => void;
+export type WithCounterProps = {
+  counter: number;
+  increment: () => void;
 };

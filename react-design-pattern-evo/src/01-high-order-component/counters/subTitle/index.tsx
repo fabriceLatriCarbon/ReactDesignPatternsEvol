@@ -1,13 +1,16 @@
-import { SharedComponentProps } from "@hoc/type";
+import { WithCounterProps } from '@hoc/type';
 
-
-
-
-const CounterSubTitle: React.FC<SharedComponentProps> = ({ sharedState }: SharedComponentProps) => {
-
+const CounterSubTitle: React.FC<WithCounterProps> = ({
+  counter,
+}: WithCounterProps) => {
   return (
-    <p className="text-xl mt-4 text-slate-200">Je suis un composant utilisant l'état depuis un HOC : {sharedState < 2 ? `${sharedState.toString()} click` : `${sharedState.toString()} clicks`} </p>
-  )
-}
+    <p className='text-xl mt-4 text-slate-200'>
+      Je suis un composant utilisant l'état depuis un HOC :{' '}
+      {counter < 2
+        ? `${counter.toString()} click`
+        : `${counter.toString()} clicks`}{' '}
+    </p>
+  );
+};
 
 export default CounterSubTitle;

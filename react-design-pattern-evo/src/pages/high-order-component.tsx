@@ -1,22 +1,18 @@
-import CounterButton from "@hoc/counters/buttons";
-import CounterSubTitle from "@hoc/counters/subTitle";
-import { SharedComponentProps } from "@hoc/type";
-import withStore from "@hoc/withStore";
-import Title from "@ui/headers/Title";
+import CounterButton from '@hoc/counters/buttons';
+import CounterSubTitle from '@hoc/counters/subTitle';
+import { WithCounterProps } from '@hoc/type';
+import withCounter from '@hoc/withCounter';
+import Title from '@ui/headers/Title';
 
-
-
-function HOCComponent(props: SharedComponentProps) {
-
+function HOCComponent(props: WithCounterProps) {
   return (
     <>
       <Title>The Counter Button</Title>
       <CounterButton {...props} />
       <CounterSubTitle {...props} />
     </>
-  )
+  );
 }
 
-
-const HOCPage = withStore(HOCComponent);
+const HOCPage = withCounter(HOCComponent);
 export default HOCPage;

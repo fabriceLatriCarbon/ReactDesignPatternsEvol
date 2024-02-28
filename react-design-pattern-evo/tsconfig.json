@@ -26,6 +26,7 @@
       "@hoc/*": ["./src/01-high-order-component/*"],
       "@renderProps/*": ["src/02-render-props/*"],
       "@customHooks/*": ["src/03-custom-hooks/*"],
+      "@propGetters/*": ["src/04-prop-getters/*"],
       "@ui/*": ["./src/ui/*"],
       "@commonHooks/*": ["./src/helpers/hooks/*"]
     }

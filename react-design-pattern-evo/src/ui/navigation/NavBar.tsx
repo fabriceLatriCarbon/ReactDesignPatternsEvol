@@ -13,6 +13,7 @@ const Navbar = () => {
     { text: "HOC", link: '/high-order-component' },
     { text: "Render Props", link: '/render-props' },
     { text: "Custom Hooks", link: '/custom-hooks' },
+    { text: "Prop Getters", link: '/prop-getters' }
   ];
 
   const navigateTo = (href: string) => {

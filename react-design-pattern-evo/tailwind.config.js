@@ -9,6 +9,10 @@ export default {
     extend: {
       colors: {
         ardoise: '#1e2027',
+        cardinal: '#bd2130',
+        easternBlue: '#17A2B8',
+        athensGray: '#E9ECEF',
+        trout: '#495057',
       },
     },
   },

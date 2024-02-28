@@ -21,6 +21,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src', '03-custom-hooks'),
       },
       {
+        find: '@propGetters',
+        replacement: path.resolve(__dirname, 'src', '04-prop-getters'),
+      },
+      {
         find: '@ui',
         replacement: path.resolve(__dirname, 'src', 'ui'),
       },

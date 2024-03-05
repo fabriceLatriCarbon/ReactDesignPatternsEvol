@@ -24,9 +24,9 @@ export default function DebounceLayout() {
   return (
     <div className="mt-8 flex flex-col items-center justify-center">
       <InputText value={localValue} id={"custom-hooks-debounce-text-input"} placeholder={"Enter text"} onChange={handleOnChange} />
-      <div className="p-4 text-slate-200 text-center">
-        <p className=" text-slate-200">Voici la valeur saisie dans l'input avec un rebond de 1000ms (1s) :</p>
-        <p className=" text-slate-200 mt-4 text-xl font-bold">{text}</p>
+      <div className="p-4 text-gray-200 text-center">
+        <p className=" text-gray-200">Voici la valeur saisie dans l'input avec un rebond de 1000ms (1s) :</p>
+        <p className=" text-gray-200 mt-4 text-xl font-bold">{text}</p>
       </div>
     </div>
   )

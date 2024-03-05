@@ -6,6 +6,6 @@ type LinearGradientButtonProps = React.PropsWithChildren & {
 export default function LinearGradientButton({ children, onClick }: LinearGradientButtonProps) {
 
   return (
-    <button className='btn-gradient-indigo-to-pink text-slate-200 font-bold py-3 px-6 rounded-lg' onClick={onClick}>{children}</button>
+    <button className='btn-gradient-indigo-to-pink text-gray-200 font-bold py-3 px-6 rounded-lg' onClick={onClick}>{children}</button>
   )
 }

@@ -18,7 +18,7 @@ function Counter({ children, value: count, onChange }: CounterProps) {
   }, [count, onChange]);
 
   return <CounterProvider value={{ count }}>
-    <div className="inline-flex border-[1px] border-easternBlue leading-6 rounded overflow-hidden">
+    <div className="inline-flex border-[1px] border-easternBlue leading-6 rounded overflow-hidde mt-4">
       {children}
     </div>
   </CounterProvider>

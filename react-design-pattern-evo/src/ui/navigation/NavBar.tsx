@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Left side */}
       <div className="flex items-center">
         <button onClick={() => setNav(!nav)} className="cursor-pointer">
-          <AiOutlineMenu size={30} className=" text-slate-200" />
+          <AiOutlineMenu size={30} className=" text-gray-200" />
         </button>
       </div>
 

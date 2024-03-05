@@ -4,13 +4,18 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom'// import App from './App.tsx'
 
+import { ThemeProvider } from "@material-tailwind/react";
+
+
 import './index.css'
 import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <App />
+      </Router>
+    </ThemeProvider>
   </React.StrictMode>,
 )

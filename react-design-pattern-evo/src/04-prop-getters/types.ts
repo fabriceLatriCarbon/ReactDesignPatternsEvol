@@ -1,3 +1,5 @@
+import { ButtonProps } from '@material-tailwind/react';
+
 export type UseCounterParams = {
   max: number;
   initial: number;
@@ -27,9 +29,10 @@ export type CountProps = {
 
 export type LabelProps = React.PropsWithChildren;
 
-export type IncrementProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  icon?: string;
-};
+export type IncrementProps = Partial<ButtonProps> &
+  React.RefAttributes<HTMLButtonElement> & {
+    icon?: string;
+  };
 
 export type DecrementProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: string;

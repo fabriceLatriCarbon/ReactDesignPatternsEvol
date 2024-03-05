@@ -51,7 +51,7 @@ export default function useCounter({
     onClick: otherProps?.onClick
       ? callFnsInSequence(handleIncrement, otherProps.onClick)
       : callFnsInSequence(handleIncrement),
-    disabled: count === max,
+    disabled: otherProps?.disabled ?? count === max,
   });
 
   return {

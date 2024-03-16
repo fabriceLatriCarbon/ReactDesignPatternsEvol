@@ -23,4 +23,30 @@
   .btn-gradient-indigo-to-pink {
     @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-gray-200 font-bold py-3 px-6 rounded-lg;
   }
+
+  .bg-gradient-indogo-to-pink {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  }
+
+  @keyframes rainbowWave {
+    0% {
+      color: #ff0000; /* Rouge */
+    }
+    25% {
+      color: #ffa500; /* Orange */
+    }
+    50% {
+      color: #ffff00; /* Jaune */
+    }
+    75% {
+      color: #00ff00; /* Vert */
+    }
+    100% {
+      color: #0000ff; /* Bleu */
+    }
+  }
+
+  .rainbow-wave {
+    animation: rainbowWave 5s infinite;
+  }
 }

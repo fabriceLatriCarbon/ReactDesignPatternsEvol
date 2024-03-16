@@ -27,8 +27,9 @@
       "@renderProps/*": ["src/02-render-props/*"],
       "@customHooks/*": ["src/03-custom-hooks/*"],
       "@propGetters/*": ["src/04-prop-getters/*"],
-      "@ui/*": ["./src/ui/*"],
-      "@commonHooks/*": ["./src/helpers/hooks/*"]
+      "@contextAPI/*": ["src/05-context-api/*"],
+      "@commonHooks/*": ["./src/helpers/hooks/*"],
+      "@ui/*": ["./src/ui/*"]
     }
   },
   "include": ["src"],

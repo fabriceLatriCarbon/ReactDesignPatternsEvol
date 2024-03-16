@@ -8,7 +8,11 @@ import routes from '~react-pages';
 function App() {
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={
+      <div className="h-full flex justify-center items-center">
+        <p className="text-gray-200 text-4xl">Loading...</p>
+      </div>
+    }>
       <AppLayout>
         {useRoutes(routes)}
       </AppLayout>

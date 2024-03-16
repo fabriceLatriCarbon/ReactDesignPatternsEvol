@@ -25,6 +25,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src', '04-prop-getters'),
       },
       {
+        find: '@contextAPI',
+        replacement: path.resolve(__dirname, 'src', '05-context-api'),
+      },
+      {
         find: '@ui',
         replacement: path.resolve(__dirname, 'src', 'ui'),
       },

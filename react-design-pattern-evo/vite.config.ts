@@ -36,6 +36,10 @@ export default defineConfig({
         find: '@commonHooks',
         replacement: path.resolve(__dirname, 'src', 'helpers', 'hooks'),
       },
+      {
+        find: '@commonContexts',
+        replacement: path.resolve(__dirname, 'src', 'helpers', 'contexts'),
+      },
     ],
   },
 });

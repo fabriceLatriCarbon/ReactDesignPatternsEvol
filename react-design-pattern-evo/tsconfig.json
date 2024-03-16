@@ -29,6 +29,7 @@
       "@propGetters/*": ["src/04-prop-getters/*"],
       "@contextAPI/*": ["src/05-context-api/*"],
       "@commonHooks/*": ["./src/helpers/hooks/*"],
+      "@commonContexts/*": ["./src/helpers/contexts/*"],
       "@ui/*": ["./src/ui/*"]
     }
   },

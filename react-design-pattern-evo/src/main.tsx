@@ -9,14 +9,17 @@ import { ThemeProvider } from "@material-tailwind/react";
 import './index.css'
 import App from './App'
 import Navbar from '@ui/navigation/NavBar';
+import AppThemeProvider from '@commonContexts/theme';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
-      <Router>
-        <Navbar />
-        <App />
-      </Router>
+      <AppThemeProvider>
+        <Router>
+          <Navbar />
+          <App />
+        </Router>
+      </AppThemeProvider>
     </ThemeProvider>
   </React.StrictMode>,
 )

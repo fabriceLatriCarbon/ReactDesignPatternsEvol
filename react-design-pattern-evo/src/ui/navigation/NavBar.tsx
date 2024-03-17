@@ -61,7 +61,7 @@ const Navbar = () => {
           }
           ref={refOuter}
         >
-          <h2 className="text-2xl p-4 font-bold dark:text-gray-200">
+          <h2 className="text-2xl p-4 font-bold dark:text-gray-200 hover:cursor-pointer" onClick={() => navigateTo('/')}>
             Menu
           </h2>
           <nav>

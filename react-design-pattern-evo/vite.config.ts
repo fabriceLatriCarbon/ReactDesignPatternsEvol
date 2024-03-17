@@ -9,6 +9,10 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: '@landing',
+        replacement: path.resolve(__dirname, 'src', '00-landing'),
+      },
+      {
         find: '@hoc',
         replacement: path.resolve(__dirname, 'src', '01-high-order-component'),
       },
@@ -39,6 +43,10 @@ export default defineConfig({
       {
         find: '@commonContexts',
         replacement: path.resolve(__dirname, 'src', 'helpers', 'contexts'),
+      },
+      {
+        find: '@utils',
+        replacement: path.resolve(__dirname, 'src', 'utils'),
       },
     ],
   },

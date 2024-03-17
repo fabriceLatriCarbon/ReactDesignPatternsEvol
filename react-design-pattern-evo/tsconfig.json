@@ -24,13 +24,15 @@
     "baseUrl": ".",
     "paths": {
       "@hoc/*": ["./src/01-high-order-component/*"],
+      "@landing/*": ["./src/00-landing/*"],
       "@renderProps/*": ["src/02-render-props/*"],
       "@customHooks/*": ["src/03-custom-hooks/*"],
       "@propGetters/*": ["src/04-prop-getters/*"],
       "@contextAPI/*": ["src/05-context-api/*"],
       "@commonHooks/*": ["./src/helpers/hooks/*"],
       "@commonContexts/*": ["./src/helpers/contexts/*"],
-      "@ui/*": ["./src/ui/*"]
+      "@ui/*": ["./src/ui/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"],

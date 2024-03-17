@@ -28,6 +28,10 @@ export default function AppThemeProvider({ children }: React.PropsWithChildren) 
     else
       document.documentElement.classList.add('light');
 
+    return () => {
+      if (isLightTheme()) document.documentElement.classList.remove('light');
+      else document.documentElement.classList.remove('dark');
+    }
   }, [])
 
 

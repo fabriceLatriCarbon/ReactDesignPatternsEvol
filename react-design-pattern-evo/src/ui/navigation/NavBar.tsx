@@ -1,11 +1,11 @@
-import { useRef } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { ImSun } from "react-icons/im";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
-import { useNavigationDrawer } from "@commonHooks/useNavigationDrawer";
-import useAppTheme from "@commonHooks/useAppTheme";
-import ClassicSwitch from "@ui/switchs/ClassicSwitch";
+import { useRef } from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { ImSun } from 'react-icons/im';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
+import { useNavigationDrawer } from '@commonHooks/useNavigationDrawer';
+import useAppTheme from '@commonHooks/useAppTheme';
+import ClassicSwitch from '@ui/switchs/ClassicSwitch';
 
 const Navbar = () => {
   const refInner = useRef<HTMLButtonElement | null>(null);
@@ -13,13 +13,12 @@ const Navbar = () => {
 
   const { appTheme, setAppTheme } = useAppTheme();
 
-
   const menuItems = [
-    { text: "HOC", link: '/high-order-component' },
-    { text: "Render Props", link: '/render-props' },
-    { text: "Custom Hooks", link: '/custom-hooks' },
-    { text: "Prop Getters", link: '/prop-getters' },
-    { text: "Provider", link: '/provider' }
+    { text: 'HOC', link: '/high-order-component' },
+    { text: 'Render Props', link: '/render-props' },
+    { text: 'Custom Hooks', link: '/custom-hooks' },
+    { text: 'Prop Getters', link: '/prop-getters' },
+    { text: 'Provider', link: '/provider' }
   ];
 
   const navigateTo = (href: string) => {
@@ -31,46 +30,61 @@ const Navbar = () => {
   const openDrawer = useNavigationDrawer(refInner, refOuter);
 
   return (
-    <div className="bg-gradient-indogo-to-pink h-16">
-      <div className="mx-auto flex justify-between items-center p-4 shadow-sm bg-gray-200 dark:bg-ardoise">
+    <div className='bg-gradient-indogo-to-pink h-16'>
+      <div className='mx-auto flex justify-between items-center p-4 shadow-sm bg-gray-200 dark:bg-ardoise'>
         {/* Left side */}
-        <div className="flex w-full items-center justify-between">
-          <button ref={refInner} className="flex-none cursor-pointer">
-            <AiOutlineMenu size={30} className="text-gray-800 dark:text-gray-200" />
+        <div className='flex w-full items-center justify-between'>
+          <button ref={refInner} className='flex-none cursor-pointer'>
+            <AiOutlineMenu size={30} className='text-gray-800 dark:text-gray-200' />
           </button>
-          <div className="grow"></div>
-          <div className="flex-none mr-12">
-            <ClassicSwitch isChecked={appTheme === 'dark'} id="nav-bar-theme-switch" onChange={() => { setAppTheme() }} label={appTheme === 'dark' ? <BsFillMoonStarsFill /> : <ImSun />} />
+          <div className='grow'></div>
+          <div className='flex-none mr-12'>
+            <ClassicSwitch
+              isChecked={appTheme === 'dark'}
+              id='nav-bar-theme-switch'
+              onChange={() => {
+                setAppTheme();
+              }}
+              label={appTheme === 'dark' ? <BsFillMoonStarsFill /> : <ImSun />}
+            />
           </div>
         </div>
 
         {/* Mobile Menu */}
         {/* Overlay */}
         {openDrawer ? (
-          <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0"></div>
+          <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>
         ) : (
-          ""
+          ''
         )}
 
         {/* Side drawer menu */}
         <div
           className={
             openDrawer
-              ? "fixed top-0 left-0 w-[300px] h-screen bg-gray-200 dark:bg-ardoise z-10 duration-300"
-              : "fixed top-0 left-[-100%] w-[300px] h-screen bg-gray-200 dark:bg-ardoise z-10 duration-300"
+              ? 'fixed top-0 left-0 w-[300px] h-screen bg-gray-200 dark:bg-ardoise z-10 duration-300'
+              : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gray-200 dark:bg-ardoise z-10 duration-300'
           }
           ref={refOuter}
         >
-          <button className="text-2xl p-4 font-bold dark:text-gray-200 hover:cursor-pointer" onClick={() => navigateTo('/')}>
+          <button
+            className='text-2xl p-4 font-bold dark:text-gray-200 hover:cursor-pointer'
+            onClick={() => navigateTo('/')}
+          >
             Menu
           </button>
           <nav>
-            <ul className="flex flex-col p-4 text-gray-800 dark:text-gray-200 items-center">
+            <ul className='flex flex-col p-4 text-gray-800 dark:text-gray-200 items-center'>
               {menuItems.map(({ text, link }, index) => {
                 return (
-                  <div key={index} className=" py-4">
+                  <div key={index} className=' py-4'>
                     <li>
-                      <button className="text-xl cursor-pointer  w-[100%] rounded-full py-2 px-8 hover:text-gray-200 hover:bg-ardoise flex-grow hover:dark:text-ardoise hover:dark:bg-gray-200" onClick={(_) => navigateTo(link)}>{text}</button>
+                      <button
+                        className='text-xl cursor-pointer  w-[100%] rounded-full py-2 px-8 hover:text-gray-200 hover:bg-ardoise flex-grow hover:dark:text-ardoise hover:dark:bg-gray-200'
+                        onClick={() => navigateTo(link)}
+                      >
+                        {text}
+                      </button>
                     </li>
                   </div>
                 );

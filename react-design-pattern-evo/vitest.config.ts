@@ -1,11 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import * as path from 'path';
-import pages from 'vite-plugin-pages';
+import path from 'path';
+import { defineConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), pages()],
+  test: {
+    // 👋 add the line below to add jsdom to vite
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.ts',
+  },
   resolve: {
     alias: [
       {

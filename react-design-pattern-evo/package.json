@@ -7,7 +7,18 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint-staged": "lint-staged",
+    "prepare": "cd .. && husky install react-design-pattern-evo/.husky"
+  },
+  "lint-staged": {
+    "**/*.{js, jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "**/*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -25,6 +36,10 @@
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
@@ -33,12 +48,18 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^8.0.0",
+    "jsdom": "^24.0.0",
     "postcss": "^8.4.35",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.0",
-    "vite-plugin-pages": "^0.32.0"
+    "vite-plugin-pages": "^0.32.0",
+    "vitest": "^1.4.0"
   }
 }

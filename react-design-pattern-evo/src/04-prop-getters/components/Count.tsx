@@ -6,7 +6,7 @@ import { CountProps } from "@propGetters/types";
 export function Count({ max }: CountProps) {
   const { count } = useCounterContext();
 
-  const hasError = max ? count > max : false;
+  const hasError = count && count > max;
 
-  return <div className={hasError ? 'bg-cardinal text-white py-[5px] px-[7px]' : 'bg-easternBlue text-white py-[5px] px-[7px]'}>{count}</div>
+  return <div data-testid="count-component" className={hasError ? 'bg-cardinal text-white py-[5px] px-[7px]' : 'bg-easternBlue text-white py-[5px] px-[7px]'}>{count}</div>
 }

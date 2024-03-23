@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useMemo, useState } from 'react';
 import { AppTheme, AppThemeContext } from '@commonContexts/theme/types';
 
 export const ThemeContext = createContext<AppThemeContext | undefined>(
@@ -34,9 +34,11 @@ export default function AppThemeProvider({ children }: React.PropsWithChildren) 
     }
   }, [])
 
-
-  return <ThemeContext.Provider value={{
+  const contextValue = useMemo(() => ({
     appTheme: theme,
     setAppTheme
-  }} >{children}</ThemeContext.Provider>
+  }), [theme, setAppTheme]);
+
+
+  return <ThemeContext.Provider value={contextValue} > {children}</ThemeContext.Provider >
 }

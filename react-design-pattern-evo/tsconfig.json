@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": ["@testing-library/jest-dom"],
 
     /* Linting */
     "strict": true,
@@ -25,16 +26,17 @@
     "paths": {
       "@hoc/*": ["./src/01-high-order-component/*"],
       "@landing/*": ["./src/00-landing/*"],
-      "@renderProps/*": ["src/02-render-props/*"],
-      "@customHooks/*": ["src/03-custom-hooks/*"],
-      "@propGetters/*": ["src/04-prop-getters/*"],
-      "@contextAPI/*": ["src/05-context-api/*"],
+      "@renderProps/*": ["./src/02-render-props/*"],
+      "@customHooks/*": ["./src/03-custom-hooks/*"],
+      "@propGetters/*": ["./src/04-prop-getters/*"],
+      "@contextAPI/*": ["./src/05-context-api/*"],
       "@commonHooks/*": ["./src/helpers/hooks/*"],
       "@commonContexts/*": ["./src/helpers/contexts/*"],
       "@ui/*": ["./src/ui/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@tests/*": ["./tests/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "tests"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

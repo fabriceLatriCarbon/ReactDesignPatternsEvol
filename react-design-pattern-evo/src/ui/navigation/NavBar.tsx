@@ -61,9 +61,9 @@ const Navbar = () => {
           }
           ref={refOuter}
         >
-          <h2 className="text-2xl p-4 font-bold dark:text-gray-200 hover:cursor-pointer" onClick={() => navigateTo('/')}>
+          <button className="text-2xl p-4 font-bold dark:text-gray-200 hover:cursor-pointer" onClick={() => navigateTo('/')}>
             Menu
-          </h2>
+          </button>
           <nav>
             <ul className="flex flex-col p-4 text-gray-800 dark:text-gray-200 items-center">
               {menuItems.map(({ text, link }, index) => {

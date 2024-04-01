@@ -1,11 +1,8 @@
-import { Count, Increment, Label } from "@propGetters/components";
-import Decrement from "@propGetters/components/Decrement";
-import { CounterProvider } from "@propGetters/contexts/useCounterContext";
-import { CounterProps } from "@propGetters/types";
-import { useRef, useEffect } from "react";
-
-
-
+import { Count, Increment, Label } from '@propGetters/components';
+import Decrement from '@propGetters/components/Decrement';
+import { CounterProvider } from '@propGetters/contexts/useCounterContext';
+import { CounterProps } from '@propGetters/types';
+import { useRef, useEffect } from 'react';
 
 function Counter({ children, value: count, onChange }: CounterProps) {
   const firstMounded = useRef(true);
@@ -17,11 +14,11 @@ function Counter({ children, value: count, onChange }: CounterProps) {
     firstMounded.current = false;
   }, [count, onChange]);
 
-  return <CounterProvider value={{ count }}>
-    <div className="inline-flex border-[1px] border-easternBlue leading-6 rounded overflow-hidde mt-4">
-      {children}
-    </div>
-  </CounterProvider>
+  return (
+    <CounterProvider value={{ count }}>
+      <div className='inline-flex mt-4'>{children}</div>
+    </CounterProvider>
+  );
 }
 
 Counter.Count = Count;

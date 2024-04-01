@@ -12,7 +12,7 @@ export function Count({ max }: CountProps) {
       className={
         hasError
           ? 'bg-cardinal text-white py-[5px] px-[7px]'
-          : 'bg-easternBlue text-white py-[5px] px-[7px]'
+          : 'text-gray-700 dark:text-white dark:bg-ardoise py-[5px] px-[7px]'
       }
     >
       {count}

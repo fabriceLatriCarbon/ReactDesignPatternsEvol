@@ -1,12 +1,12 @@
 // HOCComponentPage.tsx
 
-import React from "react";
+import React from 'react';
 
 import { WithCounterProps } from '@hoc/type';
-import CounterButton from "@hoc/counters/buttons";
-import CounterSubTitle from "@hoc/counters/subTitle";
-import Title from "@ui/headers/Title";
-import withCounter from "@hoc/HOCs/withCounter";
+import CounterButton from '@hoc/counters/buttons';
+import CounterSubTitle from '@hoc/counters/subTitle';
+import Title from '@ui/headers/Title';
+import withCounter from '@hoc/HOCs/withCounter';
 
 class HOCComponentPage extends React.PureComponent<WithCounterProps> {
   render() {
@@ -17,8 +17,9 @@ class HOCComponentPage extends React.PureComponent<WithCounterProps> {
         <CounterButton {...props} />
         <CounterSubTitle {...props} />
       </>
-    )
+    );
   }
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default withCounter(HOCComponentPage);

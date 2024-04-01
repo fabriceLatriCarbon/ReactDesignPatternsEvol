@@ -78,7 +78,7 @@ export const WavyBackground = ({
 
     for (i = 0; i < n; i++) {
       ctx.beginPath();
-      ctx.lineWidth = waveWidth || 50;
+      ctx.lineWidth = waveWidth ?? 50;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         const y = noise(x / 800, 0.3 * i, nt) * 100;
@@ -105,6 +105,7 @@ export const WavyBackground = ({
     return () => {
       cancelAnimationFrame(animationId);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [appTheme]);
 
   const [isSafari, setIsSafari] = useState(false);
@@ -112,8 +113,8 @@ export const WavyBackground = ({
     // I'm sorry but i have got to support it on safari.
     setIsSafari(
       typeof window !== 'undefined' &&
-      navigator.userAgent.includes('Safari') &&
-      !navigator.userAgent.includes('Chrome')
+        navigator.userAgent.includes('Safari') &&
+        !navigator.userAgent.includes('Chrome')
     );
   }, []);
 
